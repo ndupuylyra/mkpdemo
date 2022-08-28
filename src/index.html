@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEMO MKP LYRA</title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- HEADER -->
+    <div class="container-fluid header-lyra" style="background-image: url('./images/mkp-bg.png');background-position: center center;background-repeat: no-repeat;background-size: cover;">
+        <div class="row">
+            <div class="col">
+                <img width="100" src="images/logo-lyra.svg" alt="Lyra France" class="lyra" />
+            </div>
+        </div>
+    </div>
+    <!-- APP BODY -->
+    <div class="container app-body">
+        <div class="row">
+            <div class="col">
+                <!-- TABS INITIALIZATION-->
+                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Parcours client</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Interface d'administration</button>
+                    </li>
+                </ul>
+                <div class="tab-content" id="pills-tabContent">
+                    <!-- TAB 1 PARCOURS CLIENT -->
+                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+                        <!-- ACCORDION INITIALIZATION -->
+                        <div class="accordion" id="accordionPanelsStayOpenExample">
+                            <!-- ACCORDION 1 DEVISES ET LANGUES -->
+                            <div class="accordion-item buyer">
+                                <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                                    <button class="accordion-button buyer-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false" aria-controls="panelsStayOpen-collapseOne">
+                                        <i class="fa-solid fa-flag"></i>Devises et langues
+                                    </button>
+                                </h2>
+                                <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingOne">
+                                    <div class="accordion-body">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <label for="devise">Devise</label>
+                                                    <select class="form-select" aria-label="Default select example" name="devise">
+                                                        <option value="EUR" selected>EUR</option>
+                                                        <option value="GBP">GBP</option>
+                                                        <option value="2">CHF</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-6">
+                                                    <label for="langue">Langue</label>
+                                                    <select class="form-select" aria-label="Default select example" name="langue">
+                                                        <option value="fr" selected>Français</option>
+                                                        <option value="en">English</option>
+                                                        <option value="es">Español</option>
+                                                        <option value="it">Italiano</option>
+                                                        <option value="ja">日本語</option>
+                                                        <option value="nl">Nederlands</option>
+                                                        <option value="pl">Polski</option>
+                                                        <option value="pt">Português</option>
+                                                        <option value="ru">русский язык</option>
+                                                        <option value="sv">Svenska</option>
+                                                        <option value="tr">Türkçe</option>
+                                                        <option value="zh">中文</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ACCORDION 2 PANIER -->
+                            <div class="accordion-item buyer">
+                                <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                                    <button class="accordion-button buyer-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                                        <i class="fa-solid fa-basket-shopping"></i>Catalogue
+                                        <div class="spinner-border spinner-border-sm catalogue" role="status"></div>
+                                    </button>
+                                </h2>
+                                <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+                                    <div class="accordion-body">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-6">Test 1</div>
+                                                <div class="col-6">Test 2</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ACCORDION 3 INFOS ACHETEUR -->
+                            <div class="accordion-item buyer">
+                                <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                                    <button class="accordion-button buyer-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                                        <i class="fa-solid fa-user"></i>Infos acheteur
+                                        <div class="spinner-border spinner-border-sm acheteur" role="status"></div>
+                                    </button>
+                                </h2>
+                                <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+                                    <div class="accordion-body">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-6">Test 1</div>
+                                                <div class="col-6">Test 2</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ACCORDION 4 PANIER -->
+                            <div class="accordion-item buyer">
+                                <h2 class="accordion-header" id="panelsStayOpen-headingFour">
+                                    <button class="accordion-button buyer-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
+                                        <i class="fa-solid fa-cart-shopping"></i>Panier
+                                        <div class="spinner-border spinner-border-sm panier" role="status"></div>
+                                    </button>
+                                </h2>
+                                <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFour">
+                                    <div class="accordion-body">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-6">Test 1</div>
+                                                <div class="col-6">Test 2</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ACCORDION 5 PAIEMENT -->
+                            <div class="accordion-item buyer">
+                                <h2 class="accordion-header" id="panelsStayOpen-headingFive">
+                                    <button class="accordion-button buyer-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="true" aria-controls="panelsStayOpen-collapseFive">
+                                        <i class="fa-solid fa-credit-card"></i>Paiement
+                                        <div class="spinner-border spinner-border-sm paiement" role="status"></div>
+                                    </button>
+                                </h2>
+                                <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingFive">
+                                    <div class="accordion-body">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-6">Test 1</div>
+                                                <div class="col-6">Test 2</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- TAB 2 INTERFACE D'ADMINISTRATION -->
+                    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+                        <!-- ACCORDION INITIALIZATION -->
+                        <div class="accordion" id="admin">
+                            <!-- ACCORDION 6 PARAMETRES MARKETPLACE API -->
+                            <div class="accordion-item admin">
+                                <h2 class="accordion-header" id="panelsStayOpen-headingSix">
+                                    <button class="accordion-button admin-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseSix" aria-expanded="true" aria-controls="panelsStayOpen-collapseSix">
+                                        <i class="fa-solid fa-gear"></i>Paramètres Marketplace API
+                                        <div class="spinner-border spinner-border-sm admin-settings" role="status"></div>
+                                    </button>
+                                    <i class="fa-solid fa-rotate fa-sm reload reload-admin-settings"></i>
+                                </h2>
+                                <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingSix">
+                                    <div class="accordion-body">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col marketplaceLoading"></div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <h2 class="marketplaceDescription"></h2>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-3 apiParam section-title-mkpuuid"></div>
+                                                <div class="col-9 data mkpuuid"></div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-3 apiParam section-title-reference"></div>
+                                                <div class="col-9 data mkpReference"></div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-3 apiParam section-title-status"></div>
+                                                <div class="col-9 data mkpStatus"></div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-3 apiParam section-title-tvaRate"></div>
+                                                <div class="col-9 data mkpTvaRate"></div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-3 apiParam section-title-billingMethod"></div>
+                                                <div class="col-9 data mkpTBillingMethod"></div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-3 apiParam section-title-vouchers"></div>
+                                                <div class="col-9 data mkpVouchers"></div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-3 apiParam section-title-currencies"></div>
+                                                <div class="col-9 data mkpCurrencies">
+                                                    <div class="currenciesTitle"></div>
+                                                    <div class="container currenciesData"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ACCORDION 7 MARCHANDS -->
+                            <div class="accordion-item admin">
+                                <h2 class="accordion-header" id="panelsStayOpen-headingSeven">
+                                    <button class="accordion-button admin-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseSeven" aria-expanded="false" aria-controls="panelsStayOpen-collapseSeven">
+                                        <i class="fa-solid fa-store"></i>Marchands
+                                        <div class="spinner-border spinner-border-sm admin-sellers" role="status"></div>
+                                    </button>
+                                    <i class="fa-solid fa-rotate fa-sm reload reload-admin-sellers"></i>
+                                </h2>
+                                <div id="panelsStayOpen-collapseSeven" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingSeven">
+                                    <div class="accordion-body">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col">
+                                                    <div id="page-content">Chargement...</div>
+                                                </div>
+                                            </div>
+                                            <div class="row" style="text-align:center;">
+                                                <div class="col paginationBox">
+                                                    <ul id="pagination-demo" class="pagination-sm"></ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ACCORDION 8 CLIENTS -->
+                            <div class="accordion-item admin">
+                                <h2 class="accordion-header" id="panelsStayOpen-headingEight">
+                                    <button class="accordion-button admin-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseEight" aria-expanded="false" aria-controls="panelsStayOpen-collapseEight">
+                                        <i class="fa-solid fa-users"></i>Clients
+                                        <div class="spinner-border spinner-border-sm admin-buyers" role="status"></div>
+                                    </button>
+                                    <i class="fa-solid fa-rotate fa-sm reload reload-admin-buyers"></i>
+                                </h2>
+                                <div id="panelsStayOpen-collapseEight" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingEight">
+                                    <div class="accordion-body">
+                                        <div class="buyerList"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ACCORDION 9 COMMANDES -->
+                            <div class="accordion-item admin">
+                                <h2 class="accordion-header" id="panelsStayOpen-headingNine">
+                                    <button class="accordion-button admin-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseNine" aria-expanded="false" aria-controls="panelsStayOpen-collapseNine">
+                                        <i class="fa-solid fa-rectangle-list"></i>Commandes (les 5 dernières)
+                                        <div class="spinner-border spinner-border-sm admin-orders" role="status"></div>
+                                    </button>
+                                    <i class="fa-solid fa-rotate fa-sm reload reload-admin-orders"></i>
+                                </h2>
+                                <div id="panelsStayOpen-collapseNine" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingNine">
+                                    <div class="accordion-body">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col">
+                                                    <div class="orderList">Chargement...</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ACCORDION 10 DECAISSEMENTS -->
+                            <div class="accordion-item admin">
+                                <h2 class="accordion-header" id="panelsStayOpen-headingTen">
+                                    <button class="accordion-button admin-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTen" aria-expanded="false" aria-controls="panelsStayOpen-collapseTen">
+                                        <i class="fa-solid fa-share"></i>Décaissements (les 5 derniers)
+                                        <div class="spinner-border spinner-border-sm admin-captures" role="status"></div>
+                                    </button>
+                                </h2>
+                                <div id="panelsStayOpen-collapseTen" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTen">
+                                    <div class="accordion-body">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-6">Test 1</div>
+                                                <div class="col-6">Test 2</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mask"></div>
+    <div class="modalDiv modalValidate"></div>
+    <div class="modalDiv modalDelete"></div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="pagination.min.js"></script>
+</body>
+</html>

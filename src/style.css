@@ -1,0 +1,255 @@
+body, html {
+    background: #f3f5f8;
+    font-family: 'Montserrat', sans-serif;
+    color: #000;
+}
+
+.mask {
+    background: #000;
+    opacity: 0.5;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 11000;
+}
+.modalDiv {
+    background: #fff;
+    padding: 0;
+    margin: 0;
+    width: 500px;
+    border: 1px solid #5d5e60;
+    border-radius: 5px;
+    position: fixed;
+    top: 200px;
+    left: 50%;
+    transform: perspective(1px) translate(-50%);
+    z-index: 12000;
+    display: none;
+}
+
+.closeModalButton {
+    position:absolute;
+    top:16px;right:16px;
+    cursor:pointer;
+    font-weight: 500;
+}
+.closeModalButton:hover {
+    position:absolute;
+    top:16px;right:16px;
+    cursor:pointer;
+    color:#e91e62;
+}
+
+.modalValidateCancel, .modalDeleteCancel {
+    margin-right: 10px;
+}
+
+.spinner-border {
+    display: none;
+    position: absolute;
+    right: 20px;
+}
+.reload-admin-settings, .reload-admin-sellers, .reload-admin-buyers, .reload-admin-orders {
+    cursor: pointer;
+    z-index: 1000;
+    display: none;
+    position: absolute;
+    margin-top: -27px;
+    margin-left: 1258px;
+    color: #fff;
+    font-size: 17px;
+}
+.header-lyra {
+    width: 100%;
+    height: 90px;
+    background: #fff;
+    line-height: 90px;
+}
+.lyra {
+    margin-left: 35px;
+}
+select:focus {
+    border: 1px solid !important;
+    border-color: #293c7a !important;
+    box-shadow: none !important;
+}
+/*** APP BODY ***/
+.app-body {
+    padding-top: 25px;
+}
+
+/*** TABS ***/
+.nav-pills .nav-link {
+    background: #dcbc8a;
+    margin-right: 10px;
+    color: #fff;
+    font-weight: 600;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    background-color: #5593c5;
+    color: #fff;
+}
+
+/*** COLLAPSES ***/
+.accordion-button:focus {
+    border: none;
+    border-color: none;
+    box-shadow: none;
+}
+.buyer-button {
+    background: #293c7a;
+    color: #fff;
+    font-weight: 500;
+}
+.buyer-button:not(.collapsed) {
+    background: #293c7a;
+    color: #fff;
+}
+.admin-button {
+    background: #5593c5;
+    color: #fff !important;
+    font-weight: 500;
+}
+.admin-button:not(.collapsed) {
+    background: #5593c5;
+    color: #fff;
+}
+.buyer, .admin {
+    margin-bottom: 5px;
+    border-color: #dfdfdf;
+}
+.accordion-item button {
+    color: #fff;
+}
+.accordion-item button i {
+    margin-right: 10px;
+}
+.accordion-button::after {
+    width: 0;
+}
+
+/*** GENERAL ***/
+.marketplaceDescription {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+.apiParam {
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+.is_active {
+    padding: 5px 10px;
+    background: #a1bd00;
+    border-radius: 15px;
+    font-weight: 500;
+}
+.is_inactive {
+    padding: 5px 10px;
+    background: #ffc107;
+    border-radius: 15px;
+    font-weight: 500;
+}
+.isSeller, .isNotSeller {
+    padding: 5px 10px;
+    background: #e9ecef;
+    border-radius: 15px;
+    font-weight: 500;
+    font-size: 12px;
+    margin-right: 5px;
+}
+.isIncativeSeller {
+    padding: 5px 10px;
+    background: #ffc107;
+    border-radius: 15px;
+    font-weight: 500;
+    font-size: 12px;
+}
+.orderPending {
+    padding: 5px 10px;
+    background: #17a2b8;
+    color: #fff;
+    border-radius: 15px;
+    font-weight: 600;
+    font-size: 12px;
+}
+.orderAbandoned {
+    padding: 5px 10px;
+    background: #343a40;
+    color: #fff;
+    border-radius: 15px;
+    font-weight: 600;
+    font-size: 12px;
+}
+.orderSucceeded {
+    padding: 5px 10px;
+    background: #a1bd00;
+    border-radius: 15px;
+    font-weight: 600;
+    font-size: 12px;
+}
+.orderCancelled {
+    padding: 5px 10px;
+    background: #ffc107;
+    border-radius: 15px;
+    font-weight: 600;
+    font-size: 12px;
+}
+.orderCreated {
+    padding: 5px 10px;
+    background: #e9ecef;
+    border-radius: 15px;
+    font-weight: 600;
+    font-size: 12px;
+}
+.orderFailed {
+    padding: 5px 10px;
+    background: #e91e62;
+    border-radius: 15px;
+    font-weight: 600;
+    font-size: 12px;
+    color: #fff;
+}
+.orderToValidate {
+    color: #ffa500;
+    position: relative;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.vouchers {
+    padding: 5px 10px;
+    background: #17a2b8;
+    color: #fff;
+    border-radius: 15px;
+    font-weight: 500;
+    margin-right: 5px;
+}
+
+#pagination-demo {
+    display: inline-flex !important;
+    margin-top: 25px;
+    --bs-pagination-border-color: #5593c5 !important;
+    --bs-pagination-color: #5593c5 !important;
+    --bs-pagination-hover-bg: #dcbc8a !important;
+    --bs-pagination-hover-border-color: #5593c5 !important;
+    --bs-pagination-active-bg: #5593c5 !important;
+    --bs-pagination-active-border-color: #5593c5 !important;
+}
+
+.orderRow {
+    cursor: pointer;
+}
+.orderRow:hover {
+    background: #e9ecef;
+}
+
+.confirmLoading {
+    display: inline-block;
+    position: relative;
+    color:#5593c5;
+    border-width: 10px;
+    right:0;
+}

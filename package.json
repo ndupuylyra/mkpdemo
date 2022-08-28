@@ -1,0 +1,37 @@
+{
+  "name": "mkp-demo-lyra",
+  "version": "1.0.0",
+  "description": "Lyra Collect Marketplace API demo by Lyra Network",
+  "main": "./src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "serve": "webpack-dev-server --mode=development",
+    "deploy": "npm run build && gh-pages -d dist"
+  },
+  "author": "Nioclas Dupuy (nicolas.dupuy@lyra-network.com)",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.1.0",
+    "dotenv-webpack": "^1.7.0",
+    "html-webpack-plugin": "^3.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "node-sass": "^4.12.0",
+    "query-string": "^6.8.2",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "url-loader": "^4.1.1",
+    "webpack": "^4.38.0",
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.7.2"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.2",
+    "eslint": "^6.1.0",
+    "eslint-plugin-react": "^7.14.3",
+    "gh-pages": "^2.0.1"
+  }
+}
